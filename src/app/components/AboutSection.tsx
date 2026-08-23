@@ -92,7 +92,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="about" ref={containerRef} className="relative pt-40 pb-32 px-6 overflow-hidden">
+    <section id="about" ref={containerRef} className="relative px-6 pb-32 overflow-hidden">
       {/* Background Watermark text moving LEFT-TO-RIGHT when scrolling through About section */}
       <div
         ref={textRef}
@@ -108,7 +108,9 @@ export default function AboutSection() {
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 max-w-3xl bg-gradient-to-r from-transparent via-accent-violet/30 to-transparent" />
 
       <div className="mx-auto max-w-6xl relative z-10">
-        <ScrollReveal className="flex flex-col items-center text-center mb-24">
+        {/* Hero Area - Full Viewport Min-Height */}
+        <div className="min-h-screen flex flex-col items-center justify-center pt-28 pb-16">
+          <ScrollReveal className="flex flex-col items-center text-center w-full">
           {/* Profile Image with Glowing Border & Status */}
           <div className="relative mb-8 group">
             <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-accent-violet via-accent-cyan to-accent-pink opacity-70 blur-md transition duration-500 group-hover:opacity-100 group-hover:blur-xl" />
@@ -207,6 +209,22 @@ export default function AboutSection() {
           </div>
         </ScrollReveal>
 
+        {/* Subtle scroll down indicator */}
+        <div className="mt-8 flex justify-center animate-bounce">
+          <a
+            href="#about-details"
+            className="text-text-muted hover:text-accent-cyan transition-colors"
+            aria-label="Scroll down to About Details"
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      {/* About Details */}
+      <div id="about-details" className="pt-20">
         <ScrollReveal>
           <p className="text-sm font-semibold uppercase tracking-widest text-accent-violet">
             About Me
@@ -273,6 +291,7 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }
