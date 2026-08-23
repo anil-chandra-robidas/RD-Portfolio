@@ -17,21 +17,30 @@ export default function Footer() {
         {/* Center */}
         <div className="flex items-center gap-4 text-xs text-text-muted">
           <a
+            href="https://www.linkedin.com/in/anil-kumer/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-accent-cyan"
+          >
+            LinkedIn
+          </a>
+          <span>•</span>
+          <a
+            href="https://github.com/anil-chandra-robidas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-accent-violet-light"
+          >
+            GitHub
+          </a>
+          <span>•</span>
+          <a
             href="https://www.urionlinejudge.com.br/judge/en/profile/12487"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-accent-cyan"
           >
-            URI Online Judge Profile
-          </a>
-          <span>•</span>
-          <a
-            href="https://anil-chandra-robidas.github.io/unique-portfolio/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-accent-violet-light"
-          >
-            GitHub Portfolio
+            URI Judge Profile
           </a>
         </div>
 
