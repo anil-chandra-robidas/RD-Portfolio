@@ -48,12 +48,12 @@ const PROJECTS: Project[] = [
     codeUrl: 'https://github.com/anil-chandra-robidas',
   },
   {
-    title: 'Responsive Front-End Web Applications',
-    category: 'Front End Engineering',
+    title: 'Modern Next.js & React Web Applications',
+    category: 'Next.js & Front End',
     description:
-      'Pixel-perfect, fully responsive user interfaces built from Figma and Adobe XD prototypes using React Core, Tailwind CSS, and modern JavaScript.',
+      'Pixel-perfect, high-performance web applications and responsive user interfaces built from Figma and Adobe XD prototypes using Next.js framework, React Core, Tailwind CSS, and modern JavaScript.',
     image: '/projects/analytics.png',
-    tags: ['ReactJS', 'JavaScript ES6', 'Tailwind CSS', 'Figma to Code', 'HTML5/CSS3'],
+    tags: ['Next.js', 'ReactJS', 'JavaScript ES6', 'Tailwind CSS', 'Figma to Code'],
     liveUrl: 'https://anil-chandra-robidas.github.io/unique-portfolio/',
     codeUrl: 'https://github.com/anil-chandra-robidas',
   },
@@ -100,7 +100,7 @@ export default function ProjectsSection() {
             Featured <span className="text-gradient-static">Projects &amp; Code</span>
           </h2>
           <p className="mt-4 max-w-2xl text-base text-text-secondary sm:text-lg">
-            A selection of custom themes, plugins, and competitive programming achievements.
+            A selection of Next.js web applications, custom themes, plugins, and competitive programming achievements.
           </p>
         </ScrollReveal>
 
