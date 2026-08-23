@@ -176,12 +176,6 @@ export default function AboutSection() {
                 </svg>
                 <span>Download CV</span>
               </a>
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-2 rounded-full glass border border-glass-border px-6 py-3 text-sm font-medium text-text-primary transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 cursor-pointer"
-              >
-                <span>View Projects</span>
-              </a>
             </div>
 
             {/* Divider on Desktop */}

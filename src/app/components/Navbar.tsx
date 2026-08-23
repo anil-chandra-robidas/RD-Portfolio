@@ -60,17 +60,7 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li className="ml-3 flex items-center gap-2.5">
-            <a
-              href="/Anil_Chandra_Robidas_CV.pdf"
-              download="Anil_Chandra_Robidas_CV.pdf"
-              className="inline-flex items-center gap-1.5 rounded-full border border-accent-cyan/40 bg-accent-cyan/10 px-4 py-2 text-sm font-semibold text-accent-cyan shadow-sm transition-all duration-300 hover:bg-accent-cyan hover:text-bg-primary hover:shadow-md hover:shadow-accent-cyan/30 hover:scale-105 cursor-pointer outline-none focus:outline-none"
-            >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              <span>Download CV</span>
-            </a>
+          <li className="ml-3">
             <a
               href="#contact"
               className="inline-flex items-center rounded-full bg-gradient-to-r from-accent-violet to-accent-cyan px-5 py-2 text-sm font-semibold text-white shadow-md shadow-accent-violet/20 transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-violet/30 cursor-pointer outline-none focus:outline-none border-none"
@@ -126,26 +116,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="mt-4 flex flex-col items-center gap-3 w-full max-w-xs">
-            <a
-              href="/Anil_Chandra_Robidas_CV.pdf"
-              download="Anil_Chandra_Robidas_CV.pdf"
-              onClick={() => setMobileOpen(false)}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-accent-cyan/50 bg-accent-cyan/10 px-8 py-3 text-base font-semibold text-accent-cyan cursor-pointer outline-none focus:outline-none transition-transform hover:scale-105"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              <span>Download CV</span>
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setMobileOpen(false)}
-              className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-accent-violet to-accent-cyan px-8 py-3 text-base font-semibold text-white cursor-pointer outline-none focus:outline-none border-none shadow-lg shadow-accent-violet/25"
-            >
-              Contact Me
-            </a>
-          </div>
+          <a
+            href="#contact"
+            onClick={() => setMobileOpen(false)}
+            className="mt-4 inline-flex items-center rounded-full bg-gradient-to-r from-accent-violet to-accent-cyan px-8 py-3 text-lg font-semibold text-white cursor-pointer outline-none focus:outline-none border-none shadow-lg shadow-accent-violet/25"
+          >
+            Contact Me
+          </a>
         </nav>
       </div>
     </header>
