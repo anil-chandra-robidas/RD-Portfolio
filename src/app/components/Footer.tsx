@@ -35,6 +35,15 @@ export default function Footer() {
           </a>
           <span>•</span>
           <a
+            href="https://www.facebook.com/anil.cse"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-[#1877f2]"
+          >
+            Facebook
+          </a>
+          <span>•</span>
+          <a
             href="https://wa.me/8801838233177"
             target="_blank"
             rel="noopener noreferrer"
