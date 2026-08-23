@@ -56,14 +56,31 @@ export default function AboutSection() {
 
       <div className="mx-auto max-w-6xl relative z-10">
         <ScrollReveal className="flex flex-col items-center text-center mb-24">
-          <div className="relative h-40 w-40 overflow-hidden rounded-full border-2 border-white/20 bg-bg-secondary shadow-2xl mb-6">
-            <Image
-              src="/anil_profile.jpg"
-              alt="Anil Chandra Robidas"
-              fill
-              className="object-cover object-[center_20%]"
-            />
+          {/* Profile Image with Glowing Border & Status */}
+          <div className="relative mb-8 group">
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-accent-violet via-accent-cyan to-accent-pink opacity-70 blur-md transition duration-500 group-hover:opacity-100 group-hover:blur-xl" />
+            <div className="relative h-44 w-44 sm:h-52 sm:w-52 overflow-hidden rounded-full border-2 border-white/20 bg-bg-secondary p-1 shadow-2xl">
+              <div className="relative h-full w-full overflow-hidden rounded-full">
+                <Image
+                  src="/anil_profile.jpg"
+                  alt="Anil Chandra Robidas"
+                  fill
+                  priority
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 176px, 208px"
+                />
+              </div>
+            </div>
+            {/* Status indicator */}
+            <div className="absolute bottom-2 right-2 flex items-center gap-1.5 rounded-full bg-bg-primary/90 border border-white/10 px-3 py-1 text-[11px] font-medium text-text-primary shadow-lg backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span className="font-mono text-emerald-400 font-semibold">Available</span>
+            </div>
           </div>
+
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
             Hi, I&apos;m <span className="text-gradient">Anil Chandra Robidas</span>
           </h1>
@@ -74,7 +91,7 @@ export default function AboutSection() {
           </p>
           
           <div className="mt-8 flex flex-wrap justify-center gap-2 font-mono text-xs">
-            {['WordPress Theme & Plugin', 'PHP (OOP)', 'React Core', 'JavaScript ES6', 'Elementor', 'Tailwind CSS', 'MySQL', 'ChatGPT'].map((badge) => (
+            {['Next.js', 'WordPress Theme & Plugin', 'PHP (OOP)', 'React Core', 'JavaScript ES6', 'Elementor', 'Tailwind CSS', 'MySQL', 'ChatGPT'].map((badge) => (
               <span key={badge} className="rounded-full bg-white/5 border border-glass-border px-3.5 py-1 text-text-secondary">
                 {badge}
               </span>
