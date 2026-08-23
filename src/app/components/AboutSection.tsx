@@ -154,7 +154,7 @@ export default function AboutSection() {
           {/* Hero CTA & Social Media Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
             {/* Primary Action Buttons */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-violet to-accent-cyan px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent-violet/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-violet/40 cursor-pointer"
@@ -163,6 +163,16 @@ export default function AboutSection() {
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
+              </a>
+              <a
+                href="/Anil_Chandra_Robidas_CV.pdf"
+                download="Anil_Chandra_Robidas_CV.pdf"
+                className="inline-flex items-center gap-2 rounded-full border border-accent-cyan/40 bg-accent-cyan/10 px-6 py-3 text-sm font-semibold text-accent-cyan transition-all duration-300 hover:bg-accent-cyan hover:text-bg-primary hover:shadow-lg hover:shadow-accent-cyan/30 hover:scale-105 cursor-pointer"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>Download CV</span>
               </a>
               <a
                 href="#projects"
