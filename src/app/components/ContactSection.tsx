@@ -112,8 +112,8 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h3 className="text-xs font-semibold uppercase tracking-wider text-text-muted">Phone &amp; WhatsApp</h3>
-                    <a href="tel:+8801755448113" className="text-sm font-mono font-medium text-text-primary hover:text-accent-cyan transition-colors">
-                      +880 1755448113
+                    <a href="https://wa.me/8801838233177" target="_blank" rel="noopener noreferrer" className="text-sm font-mono font-medium text-text-primary hover:text-accent-cyan transition-colors">
+                      +880 1838233177
                     </a>
                     <p className="text-xs font-mono text-text-muted mt-0.5">+880 1740191762</p>
                   </div>
