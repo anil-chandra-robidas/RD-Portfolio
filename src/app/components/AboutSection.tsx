@@ -45,16 +45,6 @@ const SOCIAL_LINKS = [
     hoverColor: 'hover:text-[#25D366] hover:border-[#25D366]/50 hover:bg-[#25D366]/10 hover:shadow-[#25D366]/20',
   },
   {
-    name: 'URI Judge',
-    href: 'https://www.urionlinejudge.com.br/judge/en/profile/12487',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
-    hoverColor: 'hover:text-accent-cyan hover:border-accent-cyan/50 hover:bg-accent-cyan/10 hover:shadow-accent-cyan/20',
-  },
-  {
     name: 'Email',
     href: 'mailto:anilkumer.cse@gmail.com',
     icon: (

@@ -35,12 +35,12 @@ export default function Footer() {
           </a>
           <span>•</span>
           <a
-            href="https://www.urionlinejudge.com.br/judge/en/profile/12487"
+            href="https://wa.me/8801838233177"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-accent-cyan"
+            className="transition-colors hover:text-[#25D366]"
           >
-            URI Judge Profile
+            WhatsApp
           </a>
         </div>
 
