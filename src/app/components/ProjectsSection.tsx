@@ -323,6 +323,17 @@ const PROJECTS: Project[] = [
     codeUrl: 'https://github.com/anil-chandra-robidas',
   },
   {
+    title: 'AI PDF Summarizer',
+    category: 'Next.js & AI Systems',
+    tabTypes: ['all', 'next-react'],
+    description:
+      'An intelligent document summarization web application powered by Gemini AI, designed to extract key decisions, insights, study notes, and actionable takeaways from PDF documents.',
+    image: '/live-image-17.png',
+    tags: ['Next.js', 'React', 'Gemini AI', 'Tailwind CSS', 'Vercel'],
+    liveUrl: 'https://pdfsummarizer-ochre.vercel.app/',
+    codeUrl: 'https://github.com/anil-chandra-robidas',
+  },
+  {
     title: 'URI Online Judge Solutions',
     category: 'Competitive Programming',
     tabTypes: ['all'],
