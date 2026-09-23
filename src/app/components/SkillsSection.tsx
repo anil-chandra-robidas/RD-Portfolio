@@ -22,6 +22,8 @@ const SKILLS_COL_2 = [
   'Mysql',
   'Git / GitHub',
   'Photoshop, Adobe XD',
+  'Wordpress Theme Development',
+  'Wordpress Plugin Development',
 ];
 
 export default function SkillsSection() {
