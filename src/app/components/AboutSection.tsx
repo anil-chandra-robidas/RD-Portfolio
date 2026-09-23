@@ -28,7 +28,7 @@ export default function AboutSection() {
                   Hello, At first take my Greetings. My name is{' '}
                   <span className="text-[#0070f3] font-medium">Anil Chandra Robidas</span> and I have completed my B.Sc. in Computer Science and Engineering (CSE) from Hajee Mohammad Danesh Science and Technology University. I am a Front End Developer since 2019. My skills are{' '}
                   <span className="text-[#0070f3] font-medium">
-                    HTML, CSS, FLEXBOX, GRID, SASS, BOOTSTRAP, JAVASCRIPT, REACT, NEXT JS, JQUERY, Core PHP, Wordpress, Elementor, Gulp, Git/Github.
+                    HTML, CSS, FLEXBOX, GRID, SASS, BOOTSTRAP, JAVASCRIPT, REACT, NEXT JS, JQUERY, PHP/PHP OOP/Laravel, Wordpress, Elementor, Gulp, Git/Github.
                   </span>{' '}
                   I want to learn more by joining your company.
                 </p>

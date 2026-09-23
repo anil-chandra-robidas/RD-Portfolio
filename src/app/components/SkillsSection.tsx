@@ -10,7 +10,7 @@ const SKILLS_COL_1 = [
   'jQuery',
   'Wordpress',
   'Elementor',
-  'Core PHP',
+  'PHP/PHP OOP/Laravel',
   'Wordpress Support Center',
 ];
 
