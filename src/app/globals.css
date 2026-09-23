@@ -2,32 +2,32 @@
 
 /* ── Design Tokens ────────────────────────────────────── */
 :root {
-  --bg-primary: #0a0a1a;
-  --bg-secondary: #111128;
-  --bg-card: rgba(17, 17, 40, 0.6);
-  --bg-card-hover: rgba(25, 25, 60, 0.8);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
 
-  --text-primary: #f0f0ff;
-  --text-secondary: #a0a0c0;
-  --text-muted: #6b6b8a;
+  --text-primary: #000000;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
 
-  --accent-violet: #7c3aed;
-  --accent-cyan: #06b6d4;
-  --accent-pink: #ec4899;
-  --accent-violet-light: #a78bfa;
+  --accent-violet: #6d28d9;
+  --accent-cyan: #0284c7;
+  --accent-pink: #db2777;
+  --accent-violet-light: #7c3aed;
 
-  --gradient-primary: linear-gradient(135deg, #7c3aed, #06b6d4);
-  --gradient-hero: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #06b6d4 100%);
-  --gradient-glow: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  --gradient-primary: linear-gradient(135deg, #6d28d9, #0284c7);
+  --gradient-hero: linear-gradient(135deg, #6d28d9 0%, #2563eb 50%, #0284c7 100%);
+  --gradient-glow: radial-gradient(ellipse at center, rgba(109, 40, 217, 0.08) 0%, transparent 70%);
 
-  --glass-border: transparent;
-  --glass-bg: rgba(17, 17, 40, 0.65);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.85);
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 
-  --background: #0a0a1a;
-  --foreground: #f0f0ff;
+  --background: #ffffff;
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -73,8 +73,8 @@ a, button, [role="button"], input[type="submit"], input[type="button"], input[ty
 }
 
 ::selection {
-  background: rgba(124, 58, 237, 0.4);
-  color: #fff;
+  background: rgba(109, 40, 217, 0.2);
+  color: #000000;
 }
 
 /* ── Custom Scrollbar ─────────────────────────────────── */
@@ -82,14 +82,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"], input[ty
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(124, 58, 237, 0.4);
+  background: rgba(109, 40, 217, 0.25);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(124, 58, 237, 0.6);
+  background: rgba(109, 40, 217, 0.45);
 }
 
 /* ── Keyframe Animations ──────────────────────────────── */
@@ -178,14 +178,15 @@ a, button, [role="button"], input[type="submit"], input[type="button"], input[ty
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
 }
 
 .glass-strong {
-  background: rgba(17, 17, 40, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
   outline: none !important;
 }
 

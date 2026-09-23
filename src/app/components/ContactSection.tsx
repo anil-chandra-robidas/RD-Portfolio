@@ -59,31 +59,27 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-28 px-6">
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 max-w-3xl bg-gradient-to-r from-transparent via-accent-cyan/30 to-transparent" />
+    <section id="contact" className="relative py-[60px] px-6 scroll-mt-24">
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 max-w-3xl bg-gradient-to-r from-transparent via-accent-cyan/20 to-transparent" />
 
-      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-96 w-full max-w-2xl rounded-full bg-accent-violet/5 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-96 w-full max-w-2xl rounded-full bg-accent-violet/[0.02] blur-[120px]" />
 
-      <div className="mx-auto max-w-6xl relative">
-        <ScrollReveal className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent-cyan">
-            Get In Touch
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl md:text-5xl">
-            Send Me A <span className="text-gradient-static">Message</span>
-          </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-base text-text-secondary sm:text-lg">
-            Have a project or opportunity? Send me a message below and I will get back to you promptly at{' '}
-            <span className="text-accent-violet-light font-medium">anilkumer.cse@gmail.com</span>.
-          </p>
+      <div className="mx-auto max-w-[1024px] w-full relative">
+        {/* Header Banner matching reference */}
+        <ScrollReveal>
+          <div className="rounded-lg bg-[#1c448d] px-6 py-4 shadow-md mb-8 flex items-center">
+            <h2 className="text-lg sm:text-xl font-extrabold uppercase tracking-wider text-white">
+              CONTACT ME
+            </h2>
+          </div>
         </ScrollReveal>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-5">
+        <div className="grid gap-10 lg:grid-cols-5">
           {/* Left Column: Contact Cards */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             {/* Email Card */}
             <ScrollReveal delay={150}>
-              <div className="glass gradient-border rounded-2xl p-6 transition-all duration-300 hover:bg-bg-card-hover">
+              <div className="glass gradient-border rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 rounded-2xl bg-accent-violet/10 border border-accent-violet/30 text-accent-violet flex items-center justify-center shrink-0">
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -103,7 +99,7 @@ export default function ContactSection() {
 
             {/* Phone Card */}
             <ScrollReveal delay={250}>
-              <div className="glass gradient-border rounded-2xl p-6 transition-all duration-300 hover:bg-bg-card-hover">
+              <div className="glass gradient-border rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 rounded-2xl bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan flex items-center justify-center shrink-0">
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -123,7 +119,7 @@ export default function ContactSection() {
 
             {/* Location Card */}
             <ScrollReveal delay={350}>
-              <div className="glass gradient-border rounded-2xl p-6 transition-all duration-300 hover:bg-bg-card-hover">
+              <div className="glass gradient-border rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 rounded-2xl bg-pink-500/10 border border-pink-500/30 text-pink-400 flex items-center justify-center shrink-0">
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -143,7 +139,7 @@ export default function ContactSection() {
 
           {/* Right Column: Contact Form */}
           <ScrollReveal delay={200} className="lg:col-span-3">
-            <div className="glass gradient-border rounded-2xl p-8 transition-all duration-500 hover:border-accent-violet/30">
+            <div className="glass gradient-border rounded-2xl p-8 shadow-sm">
               <h3 className="text-xl font-bold text-text-primary mb-2">
                 Send a Message
               </h3>
@@ -152,7 +148,7 @@ export default function ContactSection() {
               </p>
 
               {status === 'success' && (
-                <div className="mb-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 p-4 text-emerald-400 text-sm flex items-center gap-3">
+                <div className="mb-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 p-4 text-emerald-600 text-sm flex items-center gap-3">
                   <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -173,7 +169,7 @@ export default function ContactSection() {
                       placeholder="e.g. John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-xl bg-white/5 border border-glass-border px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white/10 focus:outline-none transition-all"
+                      className="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white focus:outline-none transition-all shadow-sm"
                     />
                   </div>
 
@@ -188,7 +184,7 @@ export default function ContactSection() {
                       placeholder="e.g. john@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-xl bg-white/5 border border-glass-border px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white/10 focus:outline-none transition-all"
+                      className="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white focus:outline-none transition-all shadow-sm"
                     />
                   </div>
                 </div>
@@ -203,7 +199,7 @@ export default function ContactSection() {
                     placeholder="Project Inquiry / Job Opportunity"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full rounded-xl bg-white/5 border border-glass-border px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white/10 focus:outline-none transition-all"
+                    className="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white focus:outline-none transition-all shadow-sm"
                   />
                 </div>
 
@@ -218,24 +214,24 @@ export default function ContactSection() {
                     placeholder="Write your message here..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full rounded-xl bg-white/5 border border-glass-border px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white/10 focus:outline-none transition-all resize-none"
+                    className="w-full rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-violet focus:bg-white focus:outline-none transition-all resize-none shadow-sm"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent-violet to-accent-cyan px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent-violet/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-violet/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="group mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-black px-8 py-3.5 text-sm font-semibold text-white border-2 border-black shadow-sm transition-all duration-300 ease-out hover:bg-white hover:text-black hover:shadow-md active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {status === 'submitting' ? (
                     <>
                       <span className="h-4 w-4 rounded-full border-2 border-white/30 border-t-white animate-spin" />
-                      Sending...
+                      <span>Sending...</span>
                     </>
                   ) : (
                     <>
-                      Send Message
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <span>Send Message</span>
+                      <svg className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </>

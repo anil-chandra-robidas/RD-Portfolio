@@ -67,27 +67,27 @@ export default function Preloader() {
     <div
       ref={overlayRef}
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center"
-      style={{ backgroundColor: '#000000' }}
+      style={{ backgroundColor: '#ffffff' }}
     >
       {/* Counter */}
       <div className="flex flex-col items-center gap-6 select-none">
         <span
           ref={counterRef}
-          className="font-mono text-[clamp(4rem,12vw,9rem)] font-black leading-none text-white tracking-tight"
+          className="font-mono text-[clamp(4rem,12vw,9rem)] font-black leading-none text-black tracking-tight"
         >
           0%
         </span>
 
         {/* Progress bar */}
-        <div className="w-48 h-px bg-white/10 overflow-hidden rounded-full">
+        <div className="w-48 h-1 bg-black/10 overflow-hidden rounded-full">
           <div
             ref={progressBarRef}
-            className="h-full bg-white rounded-full"
+            className="h-full bg-black rounded-full"
             style={{ width: '0%', transition: 'none' }}
           />
         </div>
 
-        <p className="text-white/30 text-xs font-mono uppercase tracking-[0.3em]">
+        <p className="text-black/50 text-xs font-mono uppercase tracking-[0.3em]">
           Loading portfolio
         </p>
       </div>
@@ -103,7 +103,7 @@ export default function Preloader() {
       >
         <path
           d="M0,0 Q720,120 1440,0 L1440,120 L0,120 Z"
-          fill="#000000"
+          fill="#ffffff"
         />
       </svg>
     </div>

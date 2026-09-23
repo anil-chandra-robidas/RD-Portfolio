@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollReveal from './ScrollReveal';
@@ -12,7 +11,7 @@ interface Project {
   title: string;
   category: string;
   tabTypes: TabId[];
-  description: string;
+  description?: string;
   image: string;
   tags: string[];
   liveUrl?: string;
@@ -33,8 +32,6 @@ const PROJECTS: Project[] = [
     title: 'Flexio - Multipurpose WordPress Theme',
     category: 'WordPress Theme Dev',
     tabTypes: ['all', 'wordpress'],
-    description:
-      'A modern, fully responsive and customizable multipurpose WordPress theme developed with clean template structure, custom post types, and speed optimizations.',
     image: '/live-image-1.png',
     tags: ['PHP', 'WordPress', 'HTML5', 'CSS3', 'Bootstrap', 'JavaScript'],
     liveUrl: 'https://demo.themeim.com/wp/flexio/',
@@ -333,17 +330,6 @@ const PROJECTS: Project[] = [
     liveUrl: 'https://pdfsummarizer-ochre.vercel.app/',
     codeUrl: 'https://github.com/anil-chandra-robidas',
   },
-  {
-    title: 'URI Online Judge Solutions',
-    category: 'Competitive Programming',
-    tabTypes: ['all'],
-    description:
-      'Solved 200+ algorithms and data structure problems over URI Online Judge platform demonstrating strong algorithmic efficiency and logical skills.',
-    image: '/projects/dashboard.png',
-    tags: ['C / C++', 'Algorithms', 'Data Structures', 'Problem Solving'],
-    liveUrl: 'https://www.urionlinejudge.com.br/judge/en/profile/12487',
-    codeUrl: 'https://github.com/anil-chandra-robidas',
-  },
 ];
 
 export default function ProjectsSection() {
@@ -379,20 +365,17 @@ export default function ProjectsSection() {
   }, [activeTab]);
 
   return (
-    <section id="projects" className="relative py-28 px-6">
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 max-w-3xl bg-gradient-to-r from-transparent via-accent-cyan/30 to-transparent" />
+    <section id="projects" className="relative py-[60px] px-6 scroll-mt-24">
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 max-w-3xl bg-gradient-to-r from-transparent via-accent-cyan/20 to-transparent" />
 
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-[1024px] w-full">
         <ScrollReveal>
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent-cyan">
-            Portfolio Highlights
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl md:text-5xl">
-            Featured <span className="text-gradient-static">Projects &amp; Code</span>
-          </h2>
-          <p className="mt-4 max-w-2xl text-base text-text-secondary sm:text-lg">
-            A selection of Next.js web applications, custom themes, plugins, and competitive programming achievements.
-          </p>
+          {/* Header Banner matching screenshot */}
+          <div className="rounded-lg bg-[#1c448d] px-6 py-4 shadow-md mb-8 flex items-center">
+            <h2 className="text-lg sm:text-xl font-extrabold uppercase tracking-wider text-white">
+              PROJECTS
+            </h2>
+          </div>
         </ScrollReveal>
 
         {/* Filter Tabs */}
@@ -404,10 +387,10 @@ export default function ProjectsSection() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer outline-none ${
+                className={`relative rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium transition-all duration-200 ease-out cursor-pointer outline-none ${
                   isActive
-                    ? 'bg-gradient-to-r from-accent-violet to-accent-cyan text-white shadow-lg shadow-accent-violet/25 scale-105 font-semibold'
-                    : 'glass border border-glass-border text-text-secondary hover:text-text-primary hover:border-white/20 hover:bg-white/5 hover:scale-102'
+                    ? 'bg-black text-white border border-black shadow-sm font-semibold'
+                    : 'bg-white border border-slate-200 text-slate-600 hover:text-black hover:border-black hover:bg-slate-50 active:scale-95'
                 }`}
               >
                 {tab.label}
@@ -419,42 +402,33 @@ export default function ProjectsSection() {
         <div ref={cardsRef} className="mt-10 grid gap-8 sm:grid-cols-2">
           {filteredProjects.map((project) => (
             <div key={project.title} className="project-card">
-              <article className="glass gradient-border group flex h-full flex-col overflow-hidden rounded-2xl transition-all duration-500 hover:bg-bg-card-hover hover:shadow-2xl hover:shadow-accent-violet/10 hover:-translate-y-1 transform-gpu [backface-visibility:hidden]">
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md transition-all duration-500 hover:shadow-xl hover:shadow-slate-300/50 hover:-translate-y-1 transform-gpu [backface-visibility:hidden]">
                 {/* Image */}
-                <div className="relative aspect-video overflow-hidden rounded-t-2xl bg-bg-primary transform-gpu [backface-visibility:hidden] [transform:translateZ(0)] [contain:paint] isolate">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover scale-[1.01] transition-transform duration-500 ease-out group-hover:scale-105 transform-gpu [backface-visibility:hidden]"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg-primary/90 via-transparent to-transparent opacity-60" />
-                  
-                  <span className="pointer-events-none absolute top-4 left-4 z-10 rounded-full bg-bg-primary/80 backdrop-blur-md border border-glass-border px-3.5 py-1 text-xs font-mono font-semibold text-accent-cyan">
-                    {project.category}
-                  </span>
-
-                  {/* Hover Link Overlay */}
-                  {project.liveUrl && (
-                    <div className="absolute inset-0 z-20 flex items-center justify-center gap-3 bg-bg-primary/75 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Open ${project.title}`}
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-accent-violet to-accent-cyan text-white shadow-lg shadow-accent-violet/40 transition-transform duration-300 hover:scale-110"
-                      >
-                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </div>
+                <div className="overflow-hidden rounded-t-2xl bg-slate-100 h-[250px]">
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full h-full overflow-hidden"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover block transition-transform duration-500 ease-out group-hover:scale-105"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover block transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
                   )}
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 -mt-[1px] flex flex-1 flex-col p-6">
+                <div className="relative z-10 -mt-[1px] flex flex-1 flex-col p-6 bg-[#0891b2] text-white">
                   {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
@@ -462,11 +436,11 @@ export default function ProjectsSection() {
                       rel="noopener noreferrer"
                       className="group/title flex items-start justify-between gap-2"
                     >
-                      <h3 className="text-xl font-bold text-text-primary group-hover/title:text-accent-cyan transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-white group-hover/title:text-white/80 transition-colors duration-300">
                         {project.title}
                       </h3>
                       <svg
-                        className="h-4 w-4 shrink-0 mt-1 text-text-muted transition-transform duration-300 group-hover/title:text-accent-cyan group-hover/title:translate-x-0.5 group-hover/title:-translate-y-0.5"
+                        className="h-4 w-4 shrink-0 mt-1 text-white/80 transition-transform duration-300 group-hover/title:text-white group-hover/title:translate-x-0.5 group-hover/title:-translate-y-0.5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -477,21 +451,18 @@ export default function ProjectsSection() {
                     </a>
                   ) : (
                     <div className="group/title flex items-start justify-between gap-2">
-                      <h3 className="text-xl font-bold text-text-primary">
+                      <h3 className="text-xl font-bold text-white">
                         {project.title}
                       </h3>
                     </div>
                   )}
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-text-secondary">
-                    {project.description}
-                  </p>
 
                   {/* Tags */}
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-accent-violet/10 px-3 py-1 text-xs font-medium text-accent-violet-light font-mono"
+                        className="rounded-full bg-white/20 border border-white/30 px-3 py-1 text-xs font-medium text-white font-mono backdrop-blur-sm"
                       >
                         {tag}
                       </span>
