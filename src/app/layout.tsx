@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anil Chandra Robidas — Senior WordPress & Front-End Developer (7.5+ Yrs Exp)",
-  description: "Official portfolio of Anil Chandra Robidas. Senior WordPress Theme & Plugin Developer with 7.5+ years of experience in React, PHP OOP, JavaScript ES6, and Front-End engineering.",
+  title: "Anil Chandra Robidas — WordPress & Front-End Developer (5+ Yrs Exp)",
+  description: "Official portfolio of Anil Chandra Robidas. WordPress Theme & Plugin Developer with 5+ years of experience in React, PHP OOP, JavaScript ES6, and Front-End engineering.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

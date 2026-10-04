@@ -10,7 +10,7 @@ export default function Footer() {
             Anil Chandra Robidas
           </p>
           <p className="text-xs text-text-muted mt-0.5">
-            Senior WordPress &amp; Front-End Developer • 7.5+ Yrs Exp
+            WordPress &amp; Front-End Developer • 5+ Yrs Exp
           </p>
         </div>
 
